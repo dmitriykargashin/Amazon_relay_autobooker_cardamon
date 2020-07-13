@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:defaultNavHost="true"
-            app:layout_constraintBottom_toTopOf="@id/bottomAppBar"
+            app:layout_constraintBottom_toTopOf="@id/nav_view"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -29,14 +29,6 @@
     </androidx.core.widget.NestedScrollView>
 
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        />
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -44,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:background="@drawable/background_transparent"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         app:itemIconTint="@color/white"
         app:labelVisibilityMode="unlabeled"
         android:layout_gravity="bottom"
@@ -56,7 +48,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_anchor="@id/bottomAppBar"
+        app:layout_anchor="@id/nav_view"
         app:srcCompat="@drawable/ic_dashboard_black_24dp" />
 
 
